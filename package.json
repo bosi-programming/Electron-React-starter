@@ -2,9 +2,9 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@craco/craco": "^6.1.1",
-    "@linaria/babel-preset": "^3.0.0-beta.3",
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",
     "@linaria/shaker": "^3.0.0-beta.3",
@@ -26,12 +26,15 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "dev": "nf start",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "electron": "electron ./src/main.js",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ./src/main.js"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +70,8 @@
     "@storybook/addon-links": "^6.2.8",
     "@storybook/node-logger": "^6.2.8",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.8"
+    "@storybook/react": "^6.2.8",
+    "electron": "^12.0.5",
+    "foreman": "^3.0.1"
   }
 }
